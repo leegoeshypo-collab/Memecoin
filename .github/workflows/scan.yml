@@ -17,7 +17,7 @@ jobs:
           path: seen.json
           key: seen-${{ github.run_id }}
           restore-keys: seen-
-            - run: python scanner.py --once --ping
+      - run: python scanner.py --once --ping
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
