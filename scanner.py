@@ -2,23 +2,24 @@ import json, os, sys, time
 import requests
 
 CFG = {
-    "min_age_min": 15,
-    "max_age_hours": 24,
-    "min_liquidity": 15_000,
-    "min_mcap": 50_000,
-    "max_mcap": 5_000_000,
-    "min_vol_h1": 20_000,
-    "min_vol_liq_ratio": 0.5,
-    "min_liq_mcap_ratio": 0.04,
-    "min_buys_h1": 60,
-    "min_buy_ratio": 0.55,
-    "min_change_h1": 5,
-    "max_change_h1": 300,
-    "min_change_m5": -5,
-    "max_top10_pct": 40,
-    "min_score": 60,
+    "min_age_min": 0,
+    "max_age_hours": 72,
+    "min_liquidity": 3_000,
+    "min_mcap": 5_000,
+    "max_mcap": 50_000_000,
+    "min_vol_h1": 1_000,
+    "min_vol_liq_ratio": 0.05,
+    "min_liq_mcap_ratio": 0.01,
+    "min_buys_h1": 5,
+    "min_buy_ratio": 0.4,
+    "min_change_h1": -100,
+    "max_change_h1": 100000,
+    "min_change_m5": -100,
+    "max_top10_pct": 90,
+    "min_score": 0,
     "poll_seconds": 120,
 }
+
 SEEN_FILE = "seen.json"
 DEX = "https://api.dexscreener.com"
 RUG = "https://api.rugcheck.xyz/v1"
